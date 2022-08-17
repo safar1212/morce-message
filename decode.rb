@@ -11,6 +11,13 @@ def morse_code(char)
   code.key(char)
 end
 
+def decode_word(word)
+  array = word.split
+  english = []
+  array.each { |letter| english.insert(english.length, morse_code(letter)) }
+  english.join
+end
+
 def decode_msg(msg)
   array = msg.split('   ')
   english = []
