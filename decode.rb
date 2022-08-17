@@ -1,8 +1,3 @@
-
-
- @code(char) = { "a" => ".-","b" => "-...","c" => "-.-.","d" => "-..","e" => ".","f" => "..-.","g" => "--.","h" => "....","i" => "..","j" => ".---","k" => "-.-","l" => ".-..","m" => "--","n" => "-.","o" => "---","p" => ".--.","q" => "--.-","r" => ".-.","s" => "...","t" => "-","u" => "..-","v" => "...-","w" => ".--","x" => "-..-","y" => "-.--","z" => "--.."," " => " "}
-
-
  def morse_code(char)
     code = {
       'A' => '.-', 'B' => '-...', 'C' => '-.-.', 'D' => '-..', 'E' => '.',
@@ -16,8 +11,18 @@
     code.key(char)
   end
 
+  def decode_msg(msg)
+    array = msg.split('   ')
+    english = []
+    array.each { |word| english.insert(english.length, decode_word(word)) }
+    english.join(' ')
+  end
+
   puts morse_code('.-')
 
-  puts morse_code('-- -.--   -. .- -- .')
+  puts decode_word('-- -.--   -. .- -- .')
+
+  puts decode_msg('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+
 
  
