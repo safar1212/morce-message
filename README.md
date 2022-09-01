@@ -28,9 +28,9 @@ To get a local copy up and running follow these simple example steps.
 Clone the repository and change the directory to portfolio
 
 ``` 
-  `$ git clone 'https://github.com/safar1212/dogfacts.git'`
+  `$ git clone 'https://github.com/safar1212/morce-message.git'`
 
-  `$ cd dogfacts`
+  `$ cd morce-message`
 
   `$ irb`
 
